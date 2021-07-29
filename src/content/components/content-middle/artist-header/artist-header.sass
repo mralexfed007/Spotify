@@ -1,0 +1,148 @@
+.artist__header
+  height: 320px
+  border-bottom: 1px solid #282828
+  position: relative
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/spotify_img_bground.png)
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  overflow: hidden
+  z-index: 1
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  align-items: flex-end
+  &::before
+    content: " "
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: 0
+    opacity: 0.15
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/g-eazy.png)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: top
+  .artist__info
+    padding: 15px
+    z-index: 1
+    width: 75%
+    flex-shrink: 2
+    margin-top: 78px
+    display: flex
+    flex-flow: row wrap
+    align-items: flex-end
+    .profile__img
+      position: relative
+      margin-right: 15px
+      img
+        width: 150px
+        height: 150px
+        border-radius: 50%
+        vertical-align: middle
+      .fas
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 10px
+        z-index: 1
+        position: absolute
+        bottom: 5px
+        right: 15px
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        color: #fff
+        background: #4688d7
+    &__type
+      color: #aaa
+      text-transform: uppercase
+      font-size: 11px
+      letter-spacing: 1px
+    &__name
+      color: white
+      font-size: 36px
+      font-weight: 100
+      padding-bottom: 10px
+    &__actions
+      display: flex
+      flex-flow: row wrap
+      button
+        border-radius: 20px
+        text-transform: uppercase
+        letter-spacing: 1px
+        font-size: 11px
+        margin-right: 10px
+        height: 27px
+        display: flex
+        flex-flow: row wrap
+        align-items: center
+        padding: 0 15px
+        font-weight: 500
+      .btn-play
+        background: #1ed760
+        color: white
+        border: 1px solid #1ed760
+        .fas
+          margin-right: 5px
+        &:hover
+          background: #43e57d
+      .btn-follow
+        background: transparent
+        color: #c8c8c8
+        border: 1px solid #c8c8c8
+        &:hover
+          color: #fff
+          border: 1px solid #fff
+      .btn-more
+        display: flex
+        justify-content: center
+        width: 27px
+        height: 27px
+        border-radius: 50%
+        padding: 0
+        background: transparent
+        color: #c8c8c8
+        border: 1px solid #c8c8c8
+        &:hover
+          color: #fff
+          border: 1px solid #fff
+  .artist__listeners
+    z-index: 1
+    padding: 15px
+    text-align: right
+    color: #aaa
+    font-weight: 100
+    font-size: 16px
+    letter-spacing: 1px
+  .artist__navigation
+    width: 100%
+    height: 60px
+    z-index: 1
+    background: rgba(24, 24, 24, 0.6)
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    align-items: center
+    .nav-tabs
+      display: flex
+      padding-left: 0
+      margin-bottom: 0
+      list-style: none
+      margin-top: 0
+      li
+        padding: 0 15px
+      &__tab
+        padding: 15px 0
+        color: #aaa
+        background: none
+        border: none
+        text-transform: uppercase
+        &:hover
+          color: #fff
+      .is-active
+        color: #fff
+        border-bottom: 4px solid #1ed760

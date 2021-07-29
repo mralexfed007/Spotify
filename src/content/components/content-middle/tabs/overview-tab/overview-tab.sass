@@ -1,0 +1,226 @@
+.tab-overview
+  display: flex
+  flex-flow: row wrap
+  &__artist
+    padding-right: 15px
+    width: 70%
+    .title
+      text-transform: uppercase
+      color: #aaa
+      letter-spacing: 1.25px
+      font-size: 13.2px
+      margin-bottom: 10px
+    .latest-release
+      margin-bottom: 30px
+      display: flex
+      flex-flow: row wrap
+      &__img
+        width: 75px
+        height: 75px
+        img
+          width: 75px
+          height: 75px
+      &__song
+        padding: 10px 15px
+        background: #282828
+        color: #aaa
+        flex-grow: 1
+        display: flex
+        flex-flow: column wrap
+        justify-content: space-between
+        &__title
+          color: #c8c8c8
+        &__date
+          color: #aaa
+    .tracks
+      display: flex
+      flex-flow: column wrap
+      margin-bottom: 15px
+      .track
+        border-top: 1px solid #282828
+        height: 42px
+        display: flex
+        flex-flow: row wrap
+        align-items: center
+        &__img img
+          width: 42px
+          height: 42px
+        &__number
+          margin-left: 10px
+          color: #aaaaaa
+          width: 12px
+        &__added
+          margin-left: 30px
+          color: #c8c8c8
+          font-size: 14px
+        &__title
+          width: 45%
+          margin-left: 30px
+          color: #fff
+        &__explicit .label
+          border: 1px
+          border-style: solid
+          border-color: #424242
+          color: #424242
+          text-transform: uppercase
+        &__plays
+          color: #aaaaaa
+          margin-left: auto
+          padding-right: 10px
+        &:hover
+          background: #282828
+    .showmore
+      background: none
+      color: #c8c8c8
+      border: 1px solid #c8c8c8
+      &:hover
+        color: #fff
+        border: 1px solid #fff
+  &__related
+    flex-grow: 1
+    .related-artists
+      display: flex
+      flex-flow: column wrap
+      .related-artist
+        display: flex
+        align-items: center
+        background: #282828
+        padding: 5px
+        margin-bottom: 2px
+        &:hover
+          background: #373737
+        &__img
+          color: #aaa
+          img
+            width: 42px
+            height: 42px
+            border-radius: 50%
+        &__name
+          margin-left: 15px
+          color: #fff
+  &__albums
+    width: 100%
+    margin-top: 30px
+    &__head
+      border-bottom: 1px solid #282828
+      margin-bottom: 10px
+      display: flex
+      flex-flow: row wrap
+      justify-content: space-between
+      align-items: center
+      .view-style
+        color: #fff
+        margin-bottom: 4px
+        .fas
+          font-size: 12px
+          padding: 8px
+          border-radius: 50%
+        .is-active
+          background: #282828
+    .album__info
+      margin-bottom: 15px
+      display: flex
+      flex-flow: row wrap
+      &__img img
+        width: 135px
+        height: 135px
+      &__meta
+        flex-grow: 1
+        margin-left: 15px
+        display: flex
+        flex-flow: column wrap
+        .album__year
+          color: #aaa
+          letter-spacing: 1px
+        .album__name
+          color: white
+          font-size: 30px
+          font-weight: 100
+        .album__actions
+          margin-top: auto
+          .btn-save
+            padding-left: 30px
+            padding-right: 30px
+            margin-right: 10px
+            &:hover
+              color: #fff
+              border-color: #1ed760
+          .btn-more
+            font-size: 8px
+            width: 27px
+            height: 27px
+            border-radius: 50%
+            padding: 0
+            text-align: center
+            &:hover
+              color: #fff
+              border-color: #fff
+    .album__tracks
+      display: flex
+      flex-flow: column wrap
+      margin-bottom: 15px
+      &__head
+        color: #aaaaaa
+        height: 42px
+        display: flex
+        flex-flow: row wrap
+        align-items: center
+        &__number
+          margin-left: 10px
+          font-style: italic
+        &__title
+          margin-left: 70px
+          width: 45%
+          text-transform: uppercase
+          letter-spacing: 1px
+        &__length
+          margin-left: auto
+          font-size: 18px
+        &__popularity
+          font-size: 18px
+          margin-left: 55px
+          padding-right: 10px
+      .track
+        border-top: 1px solid #282828
+        height: 42px
+        display: flex
+        flex-flow: row wrap
+        align-items: center
+        &__number
+          margin-left: 10px
+          color: #aaa
+          width: 12px
+        &__added
+          font-size: 12px
+          margin-left: 30px
+          color: #c8c8c8
+        &__title
+          width: 70%
+          display: flex
+          margin-left: 30px
+          color: white
+          .title
+            color: #fff
+          .featured
+            color: #aaa
+            &:before
+              content: '-'
+              margin: 0 5px
+              color: #fff
+            &:hover
+              color: #fff
+              //text-decoration: underline
+        &__length
+          margin-left: auto
+          color: #aaa
+        &__explicit
+          border: 1px
+          border-style: solid
+          border-color: #424242
+          color: #424242
+          text-transform: uppercase
+        &__popularity
+          margin-left: 46px
+          padding-right: 10px
+          font-size: 18px
+          color: #aaa

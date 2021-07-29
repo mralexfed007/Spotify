@@ -1,0 +1,30 @@
+.current-track__options
+  display: flex
+  //flex-flow: row wrap
+  flex-grow: 2
+  justify-content: space-between
+  align-items: center
+  .fa-mobile-alt
+    padding-right: 5px
+  span
+    padding-left: 5px
+    font-size: 11px
+    text-transform: uppercase
+    color: #aaa
+    &:hover
+      color: #fff
+  .volume
+    display: flex
+    align-items: center
+    font-size: 12px
+    margin-right: 15px
+    .fas
+      padding-right: 5px
+    &__scale
+      width: 50px
+    &__scale + span
+      height: 2px
+    .MuiSlider-thumb
+      height: 15px
+      width: 15px
+  

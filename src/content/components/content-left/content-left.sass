@@ -1,0 +1,89 @@
+.content__left
+  width: 15%
+  height: auto
+  display: flex
+  align-items: stretch
+  flex-direction: column
+  .navigation
+    height: calc(100vh - 254px);
+    padding: 15px;
+    background: #282828
+    color: #aaa
+    overflow-y: scroll
+    &__list
+      margin-bottom: 10px
+      &__title
+        color: #aaa
+      &__icon
+        font-size: 20px
+        color: #aaa
+        margin: 0 10px
+      .fas
+        font-size: 12px
+      .dropdown-list
+        transition: all 0.5s ease
+        margin: 0
+        width: 100%
+        background: #282828
+        border-radius: 2px
+        border: none
+        padding: 5px 0
+        font-size: 14px
+        list-style: none  
+        li
+          transition: all 0.5s ease
+          button
+            padding: 10px
+            outline:none
+        li:hover
+          color: #fff
+        &__item:hover
+          text-decoration: none
+          border-right: 3px solid #1ed760
+  .playlist
+    display: flex
+    align-items: center
+    padding: 15px
+    background: #282828
+    border-top: 1px solid #181818
+    border-bottom: 1px solid #181818
+    span
+      color: #aaa
+      font-size: 14px  
+    &:hover
+      background-color: #424242
+      span
+        color: #fff
+    &__btn
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-right: 20px
+      width: 24px
+      height: 24px
+      border-radius: 50%
+      border: solid 1px #fff
+      .fas
+        font-size: 16px
+        color: #aaa
+  .playing
+    display: flex
+    align-items: center
+    background: #282828
+    border-bottom: 1px solid #181818
+    &__artist
+      &__img
+        margin-left: 0
+        padding-left: 0
+        img
+          width: 45px
+          height: 45px
+    &__song
+      color: #aaa
+      &__name:hover, &__artist:hover
+        color: #fff
+        text-decoration: underline
+    &__add
+      margin-left: auto
+      padding-right: 15px
+      color: #aaa

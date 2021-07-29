@@ -1,0 +1,65 @@
+@import './header/header-view/header-view.sass'
+@import './content/content-view/content-view.sass'
+@import './current-track/current-track-view/current-track-view.sass'
+
+body,
+html
+  height: 100vh
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: "Roboto", sans-serif;
+  font-size: 14px
+  -webkit-font-smoothing: antialiased
+
+::-webkit-scrollbar
+  width: 8px
+
+::-webkit-scrollbar-thumb
+  border-radius: 4px
+  background: #373737
+
+button
+  padding: 0
+  border: none
+  font: inherit
+  color: inherit
+  background-color: transparent
+  cursor: pointer
+
+.btn-rounded
+  border-radius: 20px
+  border: 1px solid #c8c8c8
+  color: #c8c8c8
+  padding: 5px 15px
+  text-transform: uppercase
+  letter-spacing: 1px
+  font-size: 11px
+  outline: none
+  &:hover
+    color: #fff
+    border-color: #fff
+
+
+.label
+    display: inline
+    padding: .2em .6em .3em
+    font-size: 75%
+    font-weight: 700
+    line-height: 1
+    text-align: center
+    white-space: nowrap
+    vertical-align: baseline
+    border-radius: .25em
+
+.title
+  color: #aaa
+  letter-spacing: 1.25px
+  font-size: 13.2px
+  margin-bottom: 10px
+
+.container
+  background: #181818
+  display: flex
+  flex-direction: column
+  //height: 100vh

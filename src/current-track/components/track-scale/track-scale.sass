@@ -1,0 +1,21 @@
+.current-track__scale
+    width: 70%;
+    padding: 0 30px;
+    color: #aaa;
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+    span > span:first-child
+      opacity: 1
+      background-color: #5e5e5e
+    span > span:nth-child(3)
+      opacity: 0
+      &:hover
+        opacity: 1
+        span
+          background-color:#4688d7
+    &__current-time
+      padding-right: 10px
+    &__total-time
+      padding-left: 10px

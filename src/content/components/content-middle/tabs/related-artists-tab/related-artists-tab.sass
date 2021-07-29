@@ -1,0 +1,48 @@
+.tab-related-artists
+  .media-cards
+    display: flex
+    flex-flow: row wrap
+    .media-card
+      margin: 15px
+      flex-grow: 1
+      width: calc( (100% / 4) - 30px )
+      justify-content: space-between
+      &__img
+        box-sizing: border-box
+        position: relative
+        height: 200px
+        //width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        i
+          transition: all 0.5s ease
+        &:hover
+          .fas
+            display: block
+            opacity: 1
+            cursor: pointer
+        img
+          height: 200px
+          width: 100%
+          object-fit: cover
+          object-position: center
+        .fas
+          position: absolute
+          z-index: 2
+          color: white
+          font-size: 60px
+          margin: 0 auto
+          opacity: 0
+          text-shadow: 1px 5px 15px #181818
+          &:hover
+            display: block
+            opacity: 1
+      &__title
+        width: 100%
+        display: block
+        background: #282828
+        padding: 15px
+        color: white
+        &:hover
+          text-decoration: underline

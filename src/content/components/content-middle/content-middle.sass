@@ -1,0 +1,16 @@
+@import './artist-header/artist-header'
+@import './tabs/overview-tab/overview-tab'
+@import './tabs/related-artists-tab/related-artists-tab'
+
+.content__middle
+  width: 70%
+  height: auto
+  display: flex
+  align-items: stretch
+  flex-direction: column
+  .artist
+    height: calc(100vh - 243px);
+    overflow-y: scroll
+    flex-grow: 1
+    &__content
+      padding: 15px
