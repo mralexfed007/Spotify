@@ -6,18 +6,6 @@ interface Props {
   currentTab: string
 }
 
-export const SwitchTabs: React.FunctionComponent<Props> = ({currentTab}) : JSX.Element => {
-  if (currentTab === 'related-artist') {
-    return (
-      <div className="artist__content">
-        <RelatedArtists />
-      </div>
-  )
-  } else {
-    return(
-      <div className="artist__content">
-        <OverviewTab />
-      </div>
-    ) 
-  }
-}
+export const SwitchTabs: React.FunctionComponent<Props> = ({currentTab}) : JSX.Element => (
+  currentTab === 'related-artist' ? (<RelatedArtists />) : (<OverviewTab />)
+)
