@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { PopularTracks } from './popular-tracks';
 
 export const ArtistSection: React.FunctionComponent = () : JSX.Element => {
@@ -8,7 +9,22 @@ export const ArtistSection: React.FunctionComponent = () : JSX.Element => {
     ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg', 'fas fa-check', 'Calm Down', '13,737,506'],
     ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg', 'fas fa-plus', 'Some Kind Of Drug', '12,234,881'],
     ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/tth.jpg', 'fas fa-check', 'Let`s Get Lost', '40,882,954'],
+    ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg', 'fas fa-check', 'Me, Myself & I', '147,544,165'],
+    ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/tth.jpg', 'fas fa-plus', 'I Mean It', '74,568,782'],
+    ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg', 'fas fa-check', 'Calm Down', '13,737,506'],
+    ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg', 'fas fa-plus', 'Some Kind Of Drug', '12,234,881'],
+    ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/tth.jpg', 'fas fa-check', 'Let`s Get Lost', '40,882,954'],
+    ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg', 'fas fa-check', 'Me, Myself & I', '147,544,165'],
+    ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/tth.jpg', 'fas fa-plus', 'I Mean It', '74,568,782'],
+    ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg', 'fas fa-check', 'Calm Down', '13,737,506'],
+    ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg', 'fas fa-plus', 'Some Kind Of Drug', '12,234,881'],
+    ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/tth.jpg', 'fas fa-check', 'Let`s Get Lost', '40,882,954'],
   ];
+
+  const [showCount, setShowCount] = useState<number>(5)
+  const handleChange = (event: any) => {
+    setShowCount(prev => prev + +event.target.value as number);
+  };
 
   return (
     <div className="tab-overview__artist">
@@ -31,8 +47,12 @@ export const ArtistSection: React.FunctionComponent = () : JSX.Element => {
       <div className="title">
         popular
       </div>
-        <PopularTracks tracks={popularTracks}/>
-      <button className="btn-rounded showmore">
+        <PopularTracks tracks={[...popularTracks.slice(0, showCount)]}/>
+      <button
+        className="btn-rounded showmore"
+        value={5}
+        onClick={handleChange}
+      >
         Show 5 more
       </button>
     </div>
