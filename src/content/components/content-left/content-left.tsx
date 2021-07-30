@@ -1,4 +1,4 @@
-import { ExpandMenuGroup } from '../expand-menu-group/expand-menu-group';
+import { ExpandMenuGroup } from './components/expand-menu-group/expand-menu-group';
 
 
 const DropDownMain = [
